@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WPU-Yk-emN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Local Video-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="_3_LocalVideo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V8t-i8-Yhz">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" rowHeight="220" id="dYS-C6-jDW" customClass="VideoCell" customModule="_3_LocalVideo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dYS-C6-jDW" id="Ou3-JT-EZw">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="videoScreenshot01" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-yb-2Ta" userLabel="videoScreenshot">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="220"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMH-05-Z9X" userLabel="playBtn">
+                                                    <rect key="frame" x="260" y="70" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="G1x-q7-Q4Q"/>
+                                                        <constraint firstAttribute="width" constant="80" id="IQ9-7A-NsI"/>
+                                                    </constraints>
+                                                    <state key="normal" image="playBtn"/>
+                                                    <connections>
+                                                        <action selector="playBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xqk-Xz-CTH"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emoji Among Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-ap-IxZ" userLabel="videoTitleLabel">
+                                                    <rect key="frame" x="0.0" y="168" width="600" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="cEj-po-GXr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube - 06:33" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40J-ST-RHb" userLabel="videoSourceLabel">
+                                                    <rect key="frame" x="0.0" y="194" width="600" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="U1j-jK-k5H"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="40J-ST-RHb" secondAttribute="bottom" constant="5" id="23w-NI-54j"/>
+                                                <constraint firstAttribute="trailing" secondItem="40J-ST-RHb" secondAttribute="trailing" id="2nQ-oh-fdd"/>
+                                                <constraint firstItem="KMH-05-Z9X" firstAttribute="centerX" secondItem="Ou3-JT-EZw" secondAttribute="centerX" id="2zP-Sj-xg4"/>
+                                                <constraint firstItem="40J-ST-RHb" firstAttribute="top" secondItem="Atq-ap-IxZ" secondAttribute="bottom" constant="5" id="5r0-Jr-pYE"/>
+                                                <constraint firstAttribute="bottom" secondItem="p8Q-yb-2Ta" secondAttribute="bottom" id="9W1-vP-AMr"/>
+                                                <constraint firstItem="KMH-05-Z9X" firstAttribute="centerY" secondItem="Ou3-JT-EZw" secondAttribute="centerY" id="M4p-XO-6dw"/>
+                                                <constraint firstAttribute="trailing" secondItem="Atq-ap-IxZ" secondAttribute="trailing" id="f01-dh-3TW"/>
+                                                <constraint firstItem="40J-ST-RHb" firstAttribute="centerX" secondItem="Ou3-JT-EZw" secondAttribute="centerX" id="jcp-ib-iKE"/>
+                                                <constraint firstAttribute="trailing" secondItem="p8Q-yb-2Ta" secondAttribute="trailing" id="kWn-4p-EgV"/>
+                                                <constraint firstItem="p8Q-yb-2Ta" firstAttribute="top" secondItem="Ou3-JT-EZw" secondAttribute="top" id="koD-Xb-Dnp"/>
+                                                <constraint firstItem="Atq-ap-IxZ" firstAttribute="centerX" secondItem="Ou3-JT-EZw" secondAttribute="centerX" id="mWj-Zx-clB"/>
+                                                <constraint firstItem="p8Q-yb-2Ta" firstAttribute="leading" secondItem="Ou3-JT-EZw" secondAttribute="leading" id="nMS-wQ-bZ7"/>
+                                                <constraint firstItem="40J-ST-RHb" firstAttribute="leading" secondItem="Ou3-JT-EZw" secondAttribute="leading" id="q7U-cl-PQw"/>
+                                                <constraint firstItem="Atq-ap-IxZ" firstAttribute="leading" secondItem="Ou3-JT-EZw" secondAttribute="leading" id="xMh-MR-eJw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoScreenshot" destination="p8Q-yb-2Ta" id="I2k-Dd-Wfa"/>
+                                            <outlet property="videoSourceLabel" destination="40J-ST-RHb" id="Kkv-eS-xOW"/>
+                                            <outlet property="videoTitleLabel" destination="Atq-ap-IxZ" id="OiA-lP-yAv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="V8t-i8-Yhz" secondAttribute="trailing" id="6WA-5Z-l8e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="V8t-i8-Yhz" secondAttribute="bottom" id="9Fd-2v-dZH"/>
+                            <constraint firstItem="V8t-i8-Yhz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="D2g-ZC-2kU"/>
+                            <constraint firstItem="V8t-i8-Yhz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K5M-WM-Smo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Local Video" id="dun-7F-l7Y"/>
+                    <connections>
+                        <outlet property="videoTableView" destination="V8t-i8-Yhz" id="uMt-47-ctk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377" y="479"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t1i-q4-2IT">
+            <objects>
+                <navigationController id="WPU-Yk-emN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="zwu-7b-yAh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kj5-BI-KrN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Tc-Ed-YNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playBtn" width="60" height="60"/>
+        <image name="videoScreenshot01" width="375" height="220"/>
+    </resources>
+</document>
