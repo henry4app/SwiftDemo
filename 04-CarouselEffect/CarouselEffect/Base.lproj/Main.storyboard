@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarouselEffect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="GWe-mP-D5v" userLabel="backgroundIV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W75-8P-muP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rvG-D8-gFc">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gpj-Px-VkY">
+                                            <rect key="frame" x="0.0" y="60" width="600" height="453"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="koH-hX-sdN">
+                                                <size key="itemSize" width="300" height="400"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCell" id="Slc-Uh-jcY" customClass="CarouselCell" customModule="CarouselEffect" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="27" width="300" height="400"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bodyline" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-WP-Duj">
+                                                                <rect key="frame" x="0.0" y="-1" width="300" height="401"/>
+                                                            </imageView>
+                                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yd-uF-b15">
+                                                                <rect key="frame" x="0.0" y="340" width="300" height="60"/>
+                                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XdG-Xa-tM5">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="60"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ9-WK-eTY">
+                                                                            <rect key="frame" x="10" y="10" width="280" height="40"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="40" id="3mq-9h-FQ5"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="EQ9-WK-eTY" firstAttribute="centerX" secondItem="XdG-Xa-tM5" secondAttribute="centerX" id="I9b-4e-h6R"/>
+                                                                        <constraint firstItem="EQ9-WK-eTY" firstAttribute="leading" secondItem="XdG-Xa-tM5" secondAttribute="leading" constant="10" id="Wb9-cb-mhC"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="EQ9-WK-eTY" secondAttribute="trailing" constant="10" id="fOZ-Y6-MgS"/>
+                                                                        <constraint firstItem="EQ9-WK-eTY" firstAttribute="centerY" secondItem="XdG-Xa-tM5" secondAttribute="centerY" id="qNk-gb-ark"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="eTM-xu-eqs"/>
+                                                                </constraints>
+                                                                <blurEffect style="light"/>
+                                                            </visualEffectView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="1yd-uF-b15" secondAttribute="trailing" id="8S6-WK-5cl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="vdw-WP-Duj" secondAttribute="trailing" id="D7N-yh-s9v"/>
+                                                        <constraint firstItem="vdw-WP-Duj" firstAttribute="top" secondItem="Slc-Uh-jcY" secondAttribute="top" id="Qff-Gz-iCw"/>
+                                                        <constraint firstItem="1yd-uF-b15" firstAttribute="leading" secondItem="Slc-Uh-jcY" secondAttribute="leading" id="UYi-kI-Zt1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="vdw-WP-Duj" secondAttribute="bottom" id="ccU-Pa-ZkO"/>
+                                                        <constraint firstItem="vdw-WP-Duj" firstAttribute="leading" secondItem="Slc-Uh-jcY" secondAttribute="leading" id="hm1-D6-p4s"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1yd-uF-b15" secondAttribute="bottom" id="nbM-v2-llA"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="featuredIV" destination="vdw-WP-Duj" id="Y93-6F-BjZ"/>
+                                                        <outlet property="titleLabel" destination="EQ9-WK-eTY" id="vLg-OT-ktT"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="BYZ-38-t0r" id="wzT-Qc-PvY"/>
+                                                <outlet property="delegate" destination="BYZ-38-t0r" id="f3T-KX-LlS"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Gpj-Px-VkY" firstAttribute="leading" secondItem="rvG-D8-gFc" secondAttribute="leading" id="1wC-TQ-bf8"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gpj-Px-VkY" secondAttribute="bottom" constant="87" id="Hm8-KM-S0e"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gpj-Px-VkY" secondAttribute="trailing" id="IG0-Ks-5bv"/>
+                                        <constraint firstItem="Gpj-Px-VkY" firstAttribute="top" secondItem="rvG-D8-gFc" secondAttribute="top" constant="60" id="uvn-Pg-BCb"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W75-8P-muP" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="95x-5h-DP0"/>
+                            <constraint firstItem="GWe-mP-D5v" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="WeA-jx-y0C"/>
+                            <constraint firstItem="GWe-mP-D5v" firstAttribute="trailing" secondItem="W75-8P-muP" secondAttribute="trailing" id="Wex-CU-TX9"/>
+                            <constraint firstItem="GWe-mP-D5v" firstAttribute="top" secondItem="W75-8P-muP" secondAttribute="top" id="cj9-Vr-Sdf"/>
+                            <constraint firstItem="GWe-mP-D5v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gjr-mU-aZp"/>
+                            <constraint firstAttribute="trailing" secondItem="W75-8P-muP" secondAttribute="trailing" id="nsq-Oj-uFx"/>
+                            <constraint firstItem="GWe-mP-D5v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ol4-Hl-ivj"/>
+                            <constraint firstItem="GWe-mP-D5v" firstAttribute="leading" secondItem="W75-8P-muP" secondAttribute="leading" id="qGW-aH-fsW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carouselCollectionView" destination="Gpj-Px-VkY" id="nYb-Ij-gtq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue" width="375" height="667"/>
+        <image name="bodyline" width="596" height="595"/>
+    </resources>
+</document>
